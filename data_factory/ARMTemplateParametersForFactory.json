@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "project0001datafactory"
+        },
+        "AzureDataLakeStorage1_accountKey": {
+            "value": ""
+        },
+        "AzureSqlDatabaseLinkedService_connectionString": {
+            "value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=project0001sqlserver.database.windows.net;Initial Catalog=project0001sqldb;User ID=sqladmin"
+        },
+        "CopyDataToSQLTrigger_properties_CopyDataToSQLDB_parameters_sourceFile": {
+            "value": "@triggerBody().fileName"
+        },
+        "CopyDataToSQLTrigger_properties_typeProperties_scope": {
+            "value": "/subscriptions/8036720e-da7a-4143-9554-7ccb580e6875/resourceGroups/project-001-smart-vehicles/providers/Microsoft.Storage/storageAccounts/project0001datalake"
+        },
+        "AzureDataLakeStorage1_properties_typeProperties_url": {
+            "value": "https://project0001datalake.dfs.core.windows.net/"
+        },
+        "AzureKeyVault1_properties_typeProperties_baseUrl": {
+            "value": "https://project0001keyvault.vault.azure.net/"
+        },
+        "AmazonS31_properties_typeProperties_accessKeyId": {
+            "value": {
+                "type": "AzureKeyVaultSecret",
+                "store": {
+                    "referenceName": "AzureKeyVault1",
+                    "type": "LinkedServiceReference"
+                },
+                "secretName": "s3accesskey"
+            }
+        }
+    }
+}

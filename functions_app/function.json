@@ -1,0 +1,32 @@
+{
+    "bindings": [
+      {
+        "name": "myBlob",
+        "path": "input/landing",
+        "connection": "project0001datalake_STORAGE",
+        "direction": "in",
+        "type": "blobTrigger"
+      },
+      {
+        "name": "stagingFolder",
+        "path": "input/staging/{rand-guid}.json",
+        "connection": "project0001datalake_STORAGE",
+        "direction": "out",
+        "type": "blob"
+      },
+      {
+        "name": "rejectedFolder",
+        "path": "input/rejectedFolder/{rand-guid}.json",
+        "connection": "project0001datalake_STORAGE",
+        "direction": "out",
+        "type": "blob"
+      },
+      {
+        "connection": "project0001datalake_STORAGE",
+        "name": "acceptedFolder",
+        "path": "input/acceptedFolder/{rand-guid}",
+        "direction": "out",
+        "type": "blob"
+      }
+    ]
+  }
