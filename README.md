@@ -1,5 +1,5 @@
 # Smart Vehicle Telemetry Processing
-Process smart vehicle telemetry data stored in Amazon S3 with Azure Data Factory, Azure Data Lake Gen2, and Azure Functions
+Process smart vehicle telemetry data stored in Amazon S3 with Azure Data Factory, Azure Data Lake Gen2, and Azure Function Apps
 
 ## Architecture
 ![Architecture Diagram](./ArchitectureDiagram.png)
