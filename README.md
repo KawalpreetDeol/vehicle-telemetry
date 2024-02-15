@@ -24,7 +24,7 @@ Used to temporarily store the data.
 Validates the file to check if the data is accurate and the file is formatted correctly. It is triggered when a file is added to the Landing folder in Data Lake Gen2. It stores the resulting file in the Staging folder if it is successfully validated and the Rejected folder if the validation is unsuccessful.
 
 ### Azure Key Vault
-Store the S3 secret key.
+Stores the S3 secret key.
 
 ### Azure SQL Server
 Stores the processed/validated data in a tabular format.
