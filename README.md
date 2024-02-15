@@ -42,7 +42,7 @@ Stores the processed/validated data in a tabular format.
 ## Improvements
 - It may be better to use parquet files, especially for files with more rows to allow for faster processing times. Parquet is a compressed column based file format.
 - Create an advanced validation script for a better validation of the data. Currently a file is rejected if even a single row is incorrect.
-- Delete the files from staging or move them to a completed folder after the pipeline is run. This is especially useful when Azure Data Factory triggers twice randomly.
+- Delete the files from staging or move them to a completed folder after the CopyDataToSQLDB pipeline is run. This is especially useful when Azure Data Factory triggers twice randomly.
 
 ## Ride Share App
 A possible extension of this project is a ride share app. Vehicle telemetry data can be streamed using IoT hub and processed using event hubs, stream analytics, data lake gen2, data factory, azure synapse or databricks. An app to track vehicle location and interact with users can be created using Azure Mobile Apps (Backend) and Flutter or React.js (Frontend).
