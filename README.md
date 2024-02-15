@@ -24,10 +24,10 @@ Used to temporarily store the data.
 Validates the file to check if the data is accurate and the file is formatted correctly. It is triggered when a file is added to the Landing folder in Data Lake Gen2. It stores the resulting file in the Staging folder if it is successfully validated and the Rejected folder if the validation is unsuccessful.
 
 ### Azure Key Vault
-Store all the secret keys.
+Store the S3 secret key.
 
 ### Azure SQL Server
-Stores the processed data in a tabular format.
+Stores the processed/validated data in a tabular format.
 
 ## Steps to Reproduce
 1. Create Amazon S3 bucket and upload the telemetry data. Grab the S3 secret key.
