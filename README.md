@@ -28,6 +28,9 @@ Validates the file to check if the data is accurate and the file is formatted co
 Stores the S3 secret key.
 
 ### Azure SQL Server
+Runs the Azure SQL Database
+
+### Azure SQL Database
 Stores the processed/validated data in a tabular format.
 
 ## Steps to Reproduce
