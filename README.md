@@ -16,9 +16,10 @@ Used to build ETL pipelines to Move data from one location to another.
     - Storage Event Based Trigger: triggered when a new file is added to the Staging folder in Data Lake Gen2
 
 ### Azure Data Lake Gen2
-Used to temporarily store the data.
+Used to injest and stage the data.
 1. Landing: stores the ingested data after being extracted from S3
 2. Staging: stores/stages the data to be copied to Azure SQL Database after being validated by the Functions App script
+3. Rejected: stores the blob files that were rejected by the Functions App Script
 
 ### Azure Functions App
 Validates the file to check if the data is accurate and the file is formatted correctly. It is triggered when a file is added to the Landing folder in Data Lake Gen2. It stores the resulting file in the Staging folder if it is successfully validated and the Rejected folder if the validation is unsuccessful.
